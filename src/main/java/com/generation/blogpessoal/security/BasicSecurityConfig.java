@@ -1,5 +1,6 @@
 package com.generation.blogpessoal.security;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +22,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class BasicSecurityConfig {
 
-    @Autowired
+	@Autowired
     private JwtAuthFilter authFilter;
 
     @Bean
@@ -72,5 +73,4 @@ public class BasicSecurityConfig {
         return http.build();
 
     }
-
 }

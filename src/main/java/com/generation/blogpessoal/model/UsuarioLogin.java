@@ -1,5 +1,6 @@
 package com.generation.blogpessoal.model;
 
+
 public class UsuarioLogin {
 	
 	private Long id;
@@ -45,6 +46,7 @@ public class UsuarioLogin {
 	public void setToken(String token) {
 		this.token = token;
 	}
-
 	
+	
+
 }

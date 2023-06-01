@@ -15,6 +15,7 @@ public class UserDetailsImpl implements UserDetails{
 	private String userName;
 	private String password;
 	private List<GrantedAuthority> authorities;
+	
 	public UserDetailsImpl(Usuario user) {
 		this.userName = user.getUsuario();
 		this.password = user.getSenha();
@@ -26,23 +27,21 @@ public class UserDetailsImpl implements UserDetails{
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities(){
-		
 		return authorities;
 	}
 	
 	@Override
 	public String getPassword() {
-		
 		return password;
 	}
 	
 	@Override
 	public String getUsername() {
-		
 		return userName;
 	}
 	
-	@Override public boolean isAccountNonExpired() {
+	@Override
+	public boolean isAccountNonExpired() {
 		return true;
 	}
 	
@@ -60,4 +59,6 @@ public class UserDetailsImpl implements UserDetails{
 	public boolean isEnabled() {
 		return true;
 	}
+	
+
 }
